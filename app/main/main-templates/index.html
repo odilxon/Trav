@@ -1,0 +1,655 @@
+{% extends 'layout.html' %}
+{% block content %}
+	<!-- ======================= Start Banner ===================== -->
+<div class="main-banner" style="background-image:url({{url_for('main.static', filename='assets/img/banner-2.jpg')}});" data-overlay="4">
+	<div class="container">
+		<div class="col-md-12 col-sm-12">
+			<div class="caption text-center cl-white">
+				<h2>Find Your Career. You Deserve it.</h2>
+				<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+			</div>
+
+		</div>
+	</div>
+</div>
+<!-- ======================= End Banner ===================== -->
+
+<!-- ======================= Search Form ===================== -->
+<section class="banner-form-search radius-right-0">
+	<div class="container-fluid">
+		<div class="row justify-content-end m-0">
+			<div class="col-lg-10 col-md-10 p-0">
+				<form class="st-search-form-tour icon-frm withlbl">
+					<div class="g-field-search">
+						<div class="row">
+							<div class="col-lg-4 col-md-4 border-right">
+								<div class="form-group">
+									<i class="ti-location-pin field-icon"></i>
+									<label>Location</label>
+									<input type="text" class="form-control" placeholder="Where are you going?">
+								</div>
+							</div>
+							
+							<div class="col-lg-3 col-md-4 border-right">
+								<div class="form-group">
+									<i class="ti-calendar field-icon"></i>
+									<label>From - To</label>
+									<input type="text" class="form-control check-in-out" name="dates" value="01/01/2018 - 01/15/2018" />
+								</div>
+							</div>
+							
+							<div class="col-lg-3 col-md-4 border-right dropdown form-select-guests">
+								<div class="form-group">
+									<i class="ti-user field-icon"></i>
+									<div class="form-content dropdown-toggle" data-toggle="dropdown">
+										<div class="wrapper-more">
+											<label>Guests</label>
+											<div class="render">
+												<span class="adults"><span class="one ">1 Adult</span> <span class=" d-none  multi" data-html=":count Adults">1 Adults</span></span>-
+												<span class="children">
+													<span class="one " data-html=":count Child">0 Child</span>
+													<span class="multi  d-none" data-html=":count Children">0 Children</span>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="dropdown-menu select-guests-dropdown">
+										<input type="hidden" name="adults" value="1" min="1" max="20">
+										<input type="hidden" name="children" value="0" min="0" max="20">
+										<div class="dropdown-item-row">
+											<div class="label">Adults</div>
+											<div class="val">
+												<span class="btn-minus" data-input="adults"><i class="ti-minus"></i></span>
+												<span class="count-display">1</span>
+												<span class="btn-add" data-input="adults"><i class="ti-plus"></i></span>
+											</div>
+										</div>
+										<div class="dropdown-item-row">
+											<div class="label">Children</div>
+											<div class="val">
+												<span class="btn-minus" data-input="children"><i class="ti-minus"></i></span>
+												<span class="count-display">0</span>
+												<span class="btn-add" data-input="children"><i class="ti-plus"></i></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+							<div class="col-lg-2 col-md-12 p-0">
+								<div class="form-group  search">
+									<button class="btn btn-theme btn-search" type="submit">Book Now</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- ======================= Search Form ===================== -->
+
+<!-- ======================= Local Experiences ===================== -->
+<section class="pb-4">
+	<div class="container">
+		
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 mb-3">
+				<h4>Local Experiences You’ll Love</h4>
+			</div>
+		</div>
+		
+		<div class="row">
+			<!-- Single Place -->
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="singlePlaceitem">
+					<figure class="singlePlacewrap">
+						<a class="place-link" href="hotel.html">
+							<img class="cover" src="{{url_for('main.static', filename='assets/img/hotel/')}}hotel-6.jpg" alt="room">
+						</a>
+					</figure>
+					<div class="placeDetail">
+						<span class="onsale-section"><span class="onsale">45% Off</span></span>
+						<div class="placeDetail-left">
+							<div class="item-rating">
+								<i class="fa fa-star filled"></i>
+								<i class="fa fa-star filled"></i>
+								<i class="fa fa-star filled"></i>
+								<i class="fa fa-star filled"></i>
+								<i class="fa fa-star"></i>
+								<span>(48) Reviews</span>
+							</div>
+							<h4 class="title"><a href="hotel.html">Atlantis Seaside Hotel</a></h4>
+							<span class="placeDetail-detail"><i class="ti-location-pin"></i>London, England</span>
+						</div>
+						<div class="pricedetail-box">
+						<h6 class="price-title-cut">$1199</h6>
+						<h4 class="price-title">$799</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Single Place -->
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="singlePlaceitem">
+					<figure class="singlePlacewrap">
+						<a class="place-link" href="hotel.html">
+							<img class="cover" src="{{url_for('main.static', filename='assets/img/hotel/')}}hotel-11.jpg" alt="room">
+						</a>
+					</figure>
+					<div class="placeDetail">
+						<span class="onsale-section"><span class="onsale">32% Off</span></span>
+						<div class="placeDetail-left">
+							<div class="item-rating">
+								<i class="fa fa-star filled"></i>
+								<i class="fa fa-star filled"></i>
+								<i class="fa fa-star filled"></i>
+								<i class="fa fa-star filled"></i>
+								<i class="fa fa-star"></i>
+								<span>(38) Reviews</span>
+							</div>
+							<h4 class="title"><a href="hotel.html">Fairyland Hotel</a></h4>
+							<span class="placeDetail-detail"><i class="ti-location-pin"></i>Florence, Italy</span>
+						</div>
+						<div class="pricedetail-box">
+						<h6 class="price-title-cut">$1299</h6>
+						<h4 class="price-title">$870</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Single Place -->
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="singlePlaceitem">
+					<figure class="singlePlacewrap">
+						<a class="place-link" href="hotel.html">
+							<img class="cover" src="{{url_for('main.static', filename='assets/img/hotel/')}}hotel-7.jpg" alt="room">
+						</a>
+					</figure>
+					<div class="placeDetail">
+						<span class="onsale-section"><span class="onsale">29% Off</span></span>
+						<div class="placeDetail-left">
+							<div class="item-rating">
+								<i class="fa fa-star filled"></i>
+								<i class="fa fa-star filled"></i>
+								<i class="fa fa-star filled"></i>
+								<i class="fa fa-star filled"></i>
+								<i class="fa fa-star"></i>
+								<span>(40) Reviews</span>
+							</div>
+							<h4 class="title"><a href="hotel.html">Fairyland Resort</a></h4>
+							<span class="placeDetail-detail"><i class="ti-location-pin"></i>Egypt, USA</span>
+						</div>
+						<div class="pricedetail-box">
+						<h6 class="price-title-cut">$1090</h6>
+						<h4 class="price-title">$870</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Single Place -->
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="singlePlaceitem">
+					<figure class="singlePlacewrap">
+						<a class="place-link" href="hotel.html">
+							<img class="cover" src="{{url_for('main.static', filename='assets/img/hotel/')}}hotel-9.jpg" alt="room">
+						</a>
+					</figure>
+					<div class="placeDetail">
+						<span class="onsale-section"><span class="onsale">30% Off</span></span>
+						<div class="placeDetail-left">
+							<div class="item-rating">
+								<i class="fa fa-star filled"></i>
+								<i class="fa fa-star filled"></i>
+								<i class="fa fa-star filled"></i>
+								<i class="fa fa-star filled"></i>
+								<i class="fa fa-star"></i>
+								<span>(48) Reviews</span>
+							</div>
+							<h4 class="title"><a href="hotel.html">Saffron Tundra Hotel</a></h4>
+							<span class="placeDetail-detail"><i class="ti-location-pin"></i>Cologne, Germany</span>
+						</div>
+						<div class="pricedetail-box">
+						<h6 class="price-title-cut">$1099</h6>
+						<h4 class="price-title">$899</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Single Place -->
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="singlePlaceitem">
+					<figure class="singlePlacewrap">
+						<a class="place-link" href="hotel.html">
+							<img class="cover" src="{{url_for('main.static', filename='assets/img/hotel/')}}hotel-8.jpg" alt="room">
+						</a>
+					</figure>
+					<div class="placeDetail">
+						<span class="onsale-section"><span class="onsale">50% Off</span></span>
+						<div class="placeDetail-left">
+							<div class="item-rating">
+								<i class="fa fa-star filled"></i>
+								<i class="fa fa-star filled"></i>
+								<i class="fa fa-star filled"></i>
+								<i class="fa fa-star filled"></i>
+								<i class="fa fa-star"></i>
+								<span>(78) Reviews</span>
+							</div>
+							<h4 class="title"><a href="hotel.html">The Great Barrier Reef</a></h4>
+							<span class="placeDetail-detail"><i class="ti-location-pin"></i>Puebla, Mexico</span>
+						</div>
+						<div class="pricedetail-box">
+						<h6 class="price-title-cut">$1199</h6>
+						<h4 class="price-title">$599</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Single Place -->
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="singlePlaceitem">
+					<figure class="singlePlacewrap">
+						<a class="place-link" href="hotel.html">
+							<img class="cover" src="{{url_for('main.static', filename='assets/img/hotel/')}}hotel-1.jpg" alt="room">
+						</a>
+					</figure>
+					<div class="placeDetail">
+						<span class="onsale-section"><span class="onsale">40% Off</span></span>
+						<div class="placeDetail-left">
+							<div class="item-rating">
+								<i class="fa fa-star filled"></i>
+								<i class="fa fa-star filled"></i>
+								<i class="fa fa-star filled"></i>
+								<i class="fa fa-star filled"></i>
+								<i class="fa fa-star"></i>
+								<span>(64) Reviews</span>
+							</div>
+							<h4 class="title"><a href="hotel.html">Remote Peaks Resort</a></h4>
+							<span class="placeDetail-detail"><i class="ti-location-pin"></i>Bergen, Norway</span>
+						</div>
+						<div class="pricedetail-box">
+						<h6 class="price-title-cut">$2000</h6>
+						<h4 class="price-title">$1200</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</section>
+<!-- ======================= Local Experiences End ===================== -->
+
+
+<!-- ======================= Tour Packages ===================== -->
+<section class="pt-0 pb-5">
+	<div class="container">
+		
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 mb-3">
+				<h4>Recent Tours Packages</h4>
+			</div>
+		</div>
+		
+		<div class="row">
+				
+			<!-- Single Tour Place -->
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="multilist-wrap">
+					<div class="multilist-thumb">
+						<span class="discount-off">-35%</span>
+						<a href="tour-detail.html"><img src="{{url_for('main.static', filename='assets/img/')}}destination/des-2.jpg" class="img-fluid img-responsive" alt="" /></a>
+						<div class="multilist-overlay">
+							<h5 class="multilist-price"><sup>$</sup>800<sub>$1349</sub></h5>
+							<span class="multilist-review"><i class="ti-face-smile"></i>4.6 Reviews</span>
+						</div>
+					</div>
+					<div class="multilist-caption">
+						<div class="multilist-caption-left">
+							<h4 class="multilist-title"><a href="tour-detail.html">Cologne, Germany</a></h4>
+							<span>14 Tour Package</span>
+						</div>
+						<ul class="multilist-list">
+							<li><i class="ti-time"></i>6 days</li>
+							<li><i class="ti-location-pin"></i>Germany, London</li>
+						</ul>
+					</div>
+					<a href="tour-detail.html" class="book-btn btn-theme">Book<i class="ti-arrow-right"></i></a>
+				</div>
+			</div>
+			
+			<!-- Single Tour Place -->
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="multilist-wrap">
+					<div class="multilist-thumb">
+						<span class="discount-off">-30%</span>
+						<a href="tour-detail.html"><img src="{{url_for('main.static', filename='assets/img/')}}destination/des-3.jpg" class="img-fluid img-responsive" alt="" /></a>
+						<div class="multilist-overlay">
+							<h5 class="multilist-price"><sup>$</sup>499<sub>$649</sub></h5>
+							<span class="multilist-review"><i class="ti-face-smile"></i>4.8 Reviews</span>
+						</div>
+					</div>
+					<div class="multilist-caption">
+						<div class="multilist-caption-left">
+							<h4 class="multilist-title"><a href="tour-detail.html">Monte Carlo, Monaco</a></h4>
+							<span>7 Tour Package</span>
+						</div>
+						<ul class="multilist-list">
+							<li><i class="ti-time"></i>6 days</li>
+							<li><i class="ti-location-pin"></i>Clifornia, USA</li>
+						</ul>
+					</div>
+					<a href="tour-detail.html" class="book-btn btn-theme">Book<i class="ti-arrow-right"></i></a>
+				</div>
+			</div>
+			
+			<!-- Single Tour Place -->
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="multilist-wrap">
+					<div class="multilist-thumb">
+						<span class="discount-off">-40%</span>
+						<a href="tour-detail.html"><img src="{{url_for('main.static', filename='assets/img/')}}destination/des-4.jpg" class="img-fluid img-responsive" alt="" /></a>
+						<div class="multilist-overlay">
+							<h5 class="multilist-price"><sup>$</sup>399<sub>$699</sub></h5>
+							<span class="multilist-review"><i class="ti-face-smile"></i>4.9 Reviews</span>
+						</div>
+					</div>
+					<div class="multilist-caption">
+						<div class="multilist-caption-left">
+							<h4 class="multilist-title"><a href="tour-detail.html">Puebla, Mexico</a></h4>
+							<span>4 Tour Package</span>
+						</div>
+						<ul class="multilist-list">
+							<li><i class="ti-time"></i>3 days</li>
+							<li><i class="ti-location-pin"></i>Mexico, NY, USA</li>
+						</ul>
+					</div>
+					<a href="tour-detail.html" class="book-btn btn-theme">Book<i class="ti-arrow-right"></i></a>
+				</div>
+			</div>
+			
+			<!-- Single Tour Place -->
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="multilist-wrap">
+					<div class="multilist-thumb">
+						<span class="discount-off">-20%</span>
+						<a href="tour-detail.html"><img src="{{url_for('main.static', filename='assets/img/')}}destination/des-5.jpg" class="img-fluid img-responsive" alt="" /></a>
+						<div class="multilist-overlay">
+							<h5 class="multilist-price"><sup>$</sup>499<sub>$580</sub></h5>
+							<span class="multilist-review"><i class="ti-face-smile"></i>4.7 Reviews</span>
+						</div>
+					</div>
+					<div class="multilist-caption">
+						<div class="multilist-caption-left">
+							<h4 class="multilist-title"><a href="tour-detail.html">Florence, Italy</a></h4>
+							<span>7 Tour Package</span>
+						</div>
+						<ul class="multilist-list">
+							<li><i class="ti-time"></i>5 days</li>
+							<li><i class="ti-location-pin"></i>Liversery, Italy</li>
+						</ul>
+					</div>
+					<a href="tour-detail.html" class="book-btn btn-theme">Book<i class="ti-arrow-right"></i></a>
+				</div>
+			</div>
+			
+			<!-- Single Tour Place -->
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="multilist-wrap">
+					<div class="multilist-thumb">
+						<span class="discount-off">-30%</span>
+						<a href="tour-detail.html"><img src="{{url_for('main.static', filename='assets/img/')}}destination/des-6.jpg" class="img-fluid img-responsive" alt="" /></a>
+						<div class="multilist-overlay">
+							<h5 class="multilist-price"><sup>$</sup>350<sub>$499</sub></h5>
+							<span class="multilist-review"><i class="ti-face-smile"></i>4.9 Reviews</span>
+						</div>
+					</div>
+					<div class="multilist-caption">
+						<div class="multilist-caption-left">
+							<h4 class="multilist-title"><a href="tour-detail.html">Salzburg, Austria</a></h4>
+							<span>6 Tour Package</span>
+						</div>
+						<ul class="multilist-list">
+							<li><i class="ti-time"></i>4 days</li>
+							<li><i class="ti-location-pin"></i>Liversood, Austria</li>
+						</ul>
+					</div>
+					<a href="tour-detail.html" class="book-btn btn-theme">Book<i class="ti-arrow-right"></i></a>
+				</div>
+			</div>
+			
+			<!-- Single Tour Place -->
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				<div class="multilist-wrap">
+					<div class="multilist-thumb">
+						<span class="discount-off">-35%</span>
+						<a href="tour-detail.html"><img src="{{url_for('main.static', filename='assets/img/')}}destination/des-7.jpg" class="img-fluid img-responsive" alt="" /></a>
+						<div class="multilist-overlay">
+							<h5 class="multilist-price"><sup>$</sup>299<sub>$449</sub></h5>
+							<span class="multilist-review"><i class="ti-face-smile"></i>4.8 Reviews</span>
+						</div>
+					</div>
+					<div class="multilist-caption">
+						<div class="multilist-caption-left">
+							<h4 class="multilist-title"><a href="tour-detail.html">Québec City, Canada</a></h4>
+							<span>4 Tour Package</span>
+						</div>
+						<ul class="multilist-list">
+							<li><i class="ti-time"></i>2 days</li>
+							<li><i class="ti-location-pin"></i>Canada, USA</li>
+						</ul>
+					</div>
+					<a href="tour-detail.html" class="book-btn btn-theme">Book<i class="ti-arrow-right"></i></a>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+</section>
+<!-- ======================= Tour Packages End ===================== -->
+
+<!-- ======================= Activities ===================== -->
+<section class="gray min">
+	<div class="container">
+		
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 mb-3">
+				<h4>Recent & Top Activities</h4>
+			</div>
+		</div>
+		
+		<div class="row">
+			<!-- Single Tour category -->
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div class="destination-item top-flap">
+			
+					<figure class="destination-list-wrap">
+						<a class="destination-listlink" href="map-search.html">
+							<img class="cover" src="{{url_for('main.static', filename='assets/img/')}}category/cat-1.jpg" alt="room">
+						</a>
+					</figure>
+					
+					<div class="destination-listdetails">
+						<div class="destination-list-reviews">
+							<i class="fa fa-star filled"></i>
+							<i class="fa fa-star filled"></i>
+							<i class="fa fa-star filled"></i>
+							<i class="fa fa-star filled"></i>
+							<i class="fa fa-star-half filled"></i>
+							<span class="review-count">704 Reviews</span>
+						</div>
+						<h4 class="title"><a class="title-ln" href="map-search.html">Dry Food Specialist</a></h4>
+						<p class="dst-location"><i class="ti-location-pin"></i>Exlio Bridge, London</p>
+					</div>
+					
+					<div class="main-link-wrap"><a href="map-search.html" class="mlw-btn btn-theme">Eat & drink</a></div>
+					
+				</div>
+			</div>
+			
+			<!-- Single Tour category -->
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div class="destination-item top-flap">
+			
+					<figure class="destination-list-wrap">
+						<a class="destination-listlink" href="map-search.html">
+							<img class="cover" src="{{url_for('main.static', filename='assets/img/')}}category/cat-2.jpg" alt="room">
+						</a>
+					</figure>
+					
+					<div class="destination-listdetails">
+						<div class="destination-list-reviews">
+							<i class="fa fa-star filled"></i>
+							<i class="fa fa-star filled"></i>
+							<i class="fa fa-star filled"></i>
+							<i class="fa fa-star filled"></i>
+							<i class="fa fa-star filled"></i>
+							<span class="review-count">704 Reviews</span>
+						</div>
+						<h4 class="title"><a class="title-ln" href="map-search.html">The City of Lights </a></h4>
+						<p class="dst-location"><i class="ti-location-pin"></i>Exlio Bridge, London</p>
+					</div>
+					
+					<div class="main-link-wrap"><a href="map-search.html" class="mlw-btn btn-theme">Adventure</a></div>
+					
+				</div>
+			</div>
+			
+			<!-- Single Tour category -->
+			<div class="col-lg-4 col-md-4 col-sm-12">
+				<div class="destination-item top-flap">
+			
+					<figure class="destination-list-wrap">
+						<a class="destination-listlink" href="map-search.html">
+							<img class="cover" src="{{url_for('main.static', filename='assets/img/')}}category/cat-3.jpg" alt="room">
+						</a>
+					</figure>
+					
+					<div class="destination-listdetails">
+						<div class="destination-list-reviews">
+							<i class="fa fa-star filled"></i>
+							<i class="fa fa-star filled"></i>
+							<i class="fa fa-star filled"></i>
+							<i class="fa fa-star filled"></i>
+							<i class="fa fa-star-half filled"></i>
+							<span class="review-count">520 Reviews</span>
+						</div>
+						<h4 class="title"><a class="title-ln" href="map-search.html">Pyramids of Giza</a></h4>
+						<p class="dst-location"><i class="ti-location-pin"></i>Exlio Bridge, London</p>
+					</div>
+					
+					<div class="main-link-wrap"><a href="map-search.html" class="mlw-btn btn-theme">Restaurants</a></div>
+					
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</section>
+<!-- ======================= Activities End ===================== -->
+
+<!-- ================= testimonial start ========================= -->
+<section class="min">
+	<div class="container">
+	
+		<div class="row">
+			<div class="col-lg-12 col-md-12 mb-3">
+				<h4>Our Traveler Syas</h4>
+			</div>
+		</div>
+		
+		<div class="row">
+			
+			<div class="col-lg-4 col-md-4">
+				<div class="testimonial-wrap">
+					<div class="testimonial-icon">
+						<img src="{{url_for('main.static', filename='assets/img/user-1.png')}}" class="img-fluid" alt="" />
+						<h5>Adam Wardilia</h5>
+						<div class="testi-rate">
+							<i class="fa fa-star filled"></i>
+							<i class="fa fa-star filled"></i>
+							<i class="fa fa-star filled"></i>
+							<i class="fa fa-star filled"></i>
+							<i class="fa fa-star filled"></i>
+						</div>
+					</div>
+					<div class="facts-detail">
+						<p>Faucibus tristique felis potenti ultrices ornare rhoncus semper hac facilisi Rutrum tellus lorem sem velit nisi non pharetra in dui.</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-lg-4 col-md-4">
+				<div class="testimonial-wrap">
+					<div class="testimonial-icon">
+						<img src="{{url_for('main.static', filename='assets/img/user-1.png')}}" class="img-fluid" alt="" />
+						<h5>Lily Warliags</h5>
+						<div class="testi-rate">
+							<i class="fa fa-star filled"></i>
+							<i class="fa fa-star filled"></i>
+							<i class="fa fa-star filled"></i>
+							<i class="fa fa-star filled"></i>
+							<i class="fa fa-star"></i>
+						</div>
+					</div>
+					<div class="facts-detail">
+						<p>Faucibus tristique felis potenti ultrices ornare rhoncus semper hac facilisi Rutrum tellus lorem sem velit nisi non pharetra in dui.</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-lg-4 col-md-4">
+				<div class="testimonial-wrap">
+					<div class="testimonial-icon">
+						<img src="{{url_for('main.static', filename='assets/img/user-1.png')}}" class="img-fluid" alt="" />
+						<h5>Swan Dikarlia</h5>
+						<div class="testi-rate">
+							<i class="fa fa-star filled"></i>
+							<i class="fa fa-star filled"></i>
+							<i class="fa fa-star filled"></i>
+							<i class="fa fa-star filled"></i>
+							<i class="fa fa-star filled"></i>
+						</div>
+					</div>
+					<div class="facts-detail">
+						<p>Faucibus tristique felis potenti ultrices ornare rhoncus semper hac facilisi Rutrum tellus lorem sem velit nisi non pharetra in dui.</p>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</section>
+<!-- ================= End testimonial ========================= -->
+	
+<!-- ============================ Newsletter Start ================================== -->
+	<section class="alert-wrap pt-5 pb-5" style="background:#ff5722 url(assets/img/bg-new.png);">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6">
+					<div class="jobalert-sec">
+						<h3 class="mb-1 text-light">Get New Jobs Notification!</h3>
+						<p class="text-light">Subscribe & get all related jobs notification.</p>
+					</div>
+				</div>
+				
+				<div class="col-lg-6 col-md-6">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Enter Your Email">
+						<div class="input-group-append">
+						<button type="button" class="btn btn-black black">Subscribe</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ============================ Newsletter Start ================================== -->			
+{% endblock content %}

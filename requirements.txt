@@ -1,0 +1,5 @@
+flask-ckeditor
+flask-migrate
+flask-wtf
+pip-chill
+psycopg2-binary
